@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html>
+<!--- /* this website is a prototype created by Sahar and isn't based on any real buiness.*/ --->
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> H&S Cafe </title>
+
+<style >/*type="text/css"*/
+      *{
+        scroll-behavior: smooth;
+        box-sizing: border-box;/* menu section box*/
+
+      }
+      body {
+        background-color: rgba(60, 160, 130, 0.07);/*light teal color*/
+        background-size: 100%;
+        width: 100%; height: 100%; margin: 0;  overflow-x: hidden; /* to prevent white space on the right  Credit: https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend*/
+        family:Verdana,Geneva,sans-serif;
+       }
+        #Homesection{
+          height: 850px;
+          width: 100%;
+          background-color:rgba(60, 160, 130, 0.07);/*light teal color*/
+          background-size: 100%;
+        }
+        #Menusection{
+          height:1600px;
+          background-color:rgba(60, 160, 130, 0.10);/*light teal color*/
+          background-size: 100%;
+        }
+        #Branchsection{
+          height: 920px;
+          background-color:rgba(53, 160, 130, 0.17);/*light teal color*/
+          background-size: 100%;
+        }
+        #Contactsection{
+          height: 770px;
+          background-color:rgba(53, 160, 130, 0.21);/*light teal color*/
+          background-size: 100%;
+        }
+
+/*-----------------------navigation bar-------------------------------------*/
+          .nav-section {
+                width: 100%;
+                background-color:rgba(4, 2, 7, 0.9); /* extra light grey*/
+                position: fixed;  /* Set the navbar to fixed position */
+                z-index: 9999; /*to set the va bar fixed indefinitely against absolute elements*/
+                margin-top: 0;
+            }
+          nav ul {
+                width: 100%;
+                margin: 0 auto ;
+                background-color: rgba(255, 255, 255, 0.15);
+                text-align: center;
+            }
+          nav ul li {
+                list-style: none;
+                display: inline-block;
+            }
+          nav ul li a {
+                display: block;
+                text-decoration: none;
+                padding: 20px 45px;
+                font-size: 21px;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: white; /*navigation bar text color */
+                transition: 0.5s ease;
+            }
+          nav ul li a:hover {
+                color:rgba(117, 237, 42, 0.81);/*neon teal*/
+            }
+
+          h3{
+            margin-left: 25px;
+            font-size: 25px;
+          }
+          h2{
+            font-size: 30px;
+          }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="nav-section">
+        <nav>
+          <ul>
+                <li><a href="Homepage.html" style="color:black; font-size:180%"> <img src="https://simpleicon.com/wp-content/uploads/key.png" alt="H&S logo" height="50" width="40" >H&S </a> </li>
+                <li><a href="Homepage.html#Menusection">Menu</a></li>
+                <li><a href="Guide.html">Guide</a></li>
+                <li><a href="About.html">About us</a></li>
+                <li><a href="Homepage.html#Branchsection">Branches</a></li>
+                <li><a href="Homepage.html#Contactsection">Contact Us</a></li>
+                <li><a href="Ar-Homepage.html">العربية</a></li>
+            </ul>
+        </nav>
+      </div>
+<br><br><br><br><br><br>
+
+          <label style="color:rgba(254, 254, 250, 0.96); font-size:35px; font-weight: bold; text-shadow: 2px 2px 5px rgba(38, 2, 2, 0.91);">
+               &nbsp; &nbsp; &nbsp; This is a fun inaccurate coffee match maker!  </label>
+               <p style="color:black; font-size:30px; font-weight: bold; text-shadow: 2px 2px 5px white;">
+                  &nbsp; &nbsp; &nbsp; you can keep count of ypur answers number to choose the ultimate answer</p>
+
+
+            <div style="font-weight: bold; text-shadow: white; margin-left: 35px;" >
+
+              <h2>How much caffeine do you like in your coffee?</h2>
+              <h3>
+                1 - None <br>
+                3 - Extra Caffeine<br>
+                2 - Reg   <br>
+                4 - varies<br>
+               </h3>
+
+               <h2>How dark do you like your beans?</h2>
+               <h3>
+                 1 - Medium (Full City or Vienna)<br>
+                 2 - Light (City)<br>
+                 3 - Dark (Northern Italian or darker)<br>
+                 4 - varies<br>
+               </h3>
+
+
+               <h2>Body? How much body do you prefer?</h2>
+               <h3>
+                 1 - Medium-bodied (like a good juice)<br>
+                 2 - Light-bodied (like tea)<br>
+                 3 - Heavy-bodied (like hot chocolate)<br>
+                 4 - varies<br>
+               </h3>
+
+
+
+
+               <h2>How do you take your coffee?</h2>
+               <h3>
+                 1 - With Cream and/or Sugar<br>
+                 2 - Extra fancy, steamed milk, flavored syrups, etc.<br>
+                 3 - Black<br>
+                 4 - varies<br>
+               </h3>
+
+
+
+               <h2>What kind of chocolate do you like best?</h2>
+               <h3>
+                 1 - white<br>
+                 2 - milk<br>
+                 3 - dark<br>
+                 4 - varies/all<br>
+               </h3>
+
+
+
+
+               <h2>What kind of fruit do you prefer?</h2>
+               <h3>
+                 1 - Apples, Berries, Citrus<br>
+                 2 - Peaches, Plums, Apricots<br>
+                 3 - Tropical (Mango, Papaya, Kiwi, etc)<br>
+                 4 - varies/all<br>
+               </h3>
+
+
+
+               <h2>Favorite time to drink coffee:</h2>
+               <h3>
+                 1 - First thing in the morning<br>
+                 2 - With friends and/or food<br>
+                 3 - All Day Long<br>
+                 4 - Depends on the Day<br>
+               </h3>
+
+
+
+               <h2>When I go to a restaurant:</h2>
+               <h3>
+                 1 - I choose something I know will be delicious.<br>
+                 2 - I choose the restaurant's specialty.<br>
+                 3 - I ask the server for a recommendation<br>
+                 4 - I choose something interesting and new.<br>
+               </h3>
+<br>
+
+      <form class="" action="index.html" method="post">
+
+        <h2>The result</h2>
+        <label style = "font-size: 28px;"><input  onclick="displayResult1()" name="Result" type="radio" value="1"> Mostly 1’s </label> <br>
+          <p id="text1" style = "display:none; ">  Mostly 1’s:<a href="Homepage.html#Menusection" style="color:pink;"> Intelligentsia Summr Solstic </a> You score high on the Conscientiousness measure.<br>  You’re a focused, reliable individual who knows what you like and how to get it. <br></p>
+        <label style = "font-size: 28px;"><input  onclick="displayResult2()" name="Result" type="radio" value="2"> Mostly 2’s</label><br>
+          <p id="text2" style = "display:none; ">  Mostly 2’s:<a href="Homepage.html#Menusection" style="color:lightblue;"> Intelligentsia Persephone </a> You score high on the Agreeableness measure.  <br> You’re a kind and compassionate individual who enjoys helping others.<br> </p>
+        <label style = "font-size: 28px;"><input onclick="displayResult3()" name="Result" type="radio" value="3"> Mostly 3’s </label><br>
+          <p id="text3" style = "display:none; ">  Mostly 3’s:<a href="Homepage.html#Menusection" style="color:maroon;"> Intelligentsia Otono </a> You score high on the Extraversion measure. <br> You’re a friendly and outgoing individual who enjoys interacting with others. <br></p>
+        <label style = "font-size: 28px;"><input  onclick="displayResult4()" name="Result" type="radio" value="4"> Mostly 4’s </label> <br>
+          <p id="text4" style = "display:none; ">  Mostly 4’s:<a href="Homepage.html#Menusection" style="color:blue;"> Intelligentsia Borealis </a> You score high on the Openness measure. <br> You’re a curious individual who seeks out new experiences and enjoys the adventure of trying new things.<br> </p>
+      </form>
+<br>
+    </div>
+
+<script type="text/javascript">
+
+  function displayResult1(){
+    var t1 = document.getElementById("text1");
+    var t2 = document.getElementById("text2");
+    var t3 = document.getElementById("text3");
+    var t4 = document.getElementById("text4");
+      t1.style="display; font-size: 25px;";
+      t2.style="display:none";
+      t3.style="display:none";
+      t4.style="display:none";}
+  var x = document.getElementById("Al-Qassim");
+      var t2 = document.getElementById("text2");
+      var t3 = document.getElementById("text3");
+      var t4 = document.getElementById("text4");
+
+      function displayResult2(){
+        var t1 = document.getElementById("text1");
+        var t2 = document.getElementById("text2");
+        var t3 = document.getElementById("text3");
+        var t4 = document.getElementById("text4");
+          t1.style="display:none";
+          t2.style="display; font-size: 25px;";
+          t3.style="display:none";
+          t4.style="display:none";}
+
+          function displayResult3(){
+            var t1 = document.getElementById("text1");
+            var t2 = document.getElementById("text2");
+            var t3 = document.getElementById("text3");
+            var t4 = document.getElementById("text4");
+              t1.style="display:none";
+              t2.style="display:none";
+              t3.style="display;font-size: 25px;";
+              t4.style="display:none";}
+
+              function displayResult4(){
+                var t1 = document.getElementById("text1");
+                var t2 = document.getElementById("text2");
+                var t3 = document.getElementById("text3");
+                var t4 = document.getElementById("text4");
+                  t1.style="display:none";
+                  t2.style="display:none";
+                  t3.style="display:none";
+                  t4.style="display; font-size: 25px;";}
+/* CREDIT:
+   Script code self written
+   Quiz taken from coffee by the roast..
+   https://coffeebytheroast.com/blog/2019/3/29/foolish-coffee-personality-quiz?rq=coffee%20personality */
+</script>
+
+</body>
+
+<footer style=" background-color: black; height: 100px;">
+
+    <div style="text-align: center; margin-left: 45px; font-size: 15px;"><br>
+    <a href="Homepage.html#Homesection" target="_blank" style="color: white;"> Home</a> &nbsp; &nbsp;&nbsp;
+    <a href="Homepage.html#Menusection" target="_blank" style="color: white;"> Menu</a>  &nbsp; &nbsp;&nbsp;
+    <a href="Guide.html" target="_blank" style="color: white;"> Match Maker!</a>  &nbsp; &nbsp;&nbsp;
+    <a href="About.html" target="_blank" style="color: white;"> About us</a>  &nbsp; &nbsp;&nbsp;
+    <a href="Homepage.html#Branchsection" target="_blank" style="color: white;"> Locations</a>  &nbsp; &nbsp;&nbsp;
+    <a href="mailto: abc@example.com" target="_blank" style="color: white;"> Email </a>  &nbsp; &nbsp;&nbsp;
+    <a href="https://twitter.com/explore" target="_blank" style="color: white;"> Twitter</a>  &nbsp; &nbsp;&nbsp;
+    <a href="https://www.facebook.com/facebook" target="_blank" style="color: white;"> Facebook</a>  &nbsp; &nbsp;&nbsp;
+    <a href="https://www.instagram.com/" target="_blank" style="color: white;"> instagram</a>  &nbsp; &nbsp;&nbsp;
+    <a href="EmploymentForm.html" target="_blank" style="color: white;"> Join us! </a>  &nbsp; &nbsp;&nbsp;
+    <a href="Homepage.com" target="_blank" style="color: white;"> Terms & Conditions </a>  &nbsp; &nbsp;&nbsp;
+    <input type="text" placeholder="   Search.." style="border-radius: 5px; border-width: 1px; border-color: white;"> <br>
+    <a style="color: white;"> © All Rights Reserved 2020 <br> Designed by Sahar </a>  &nbsp; &nbsp;&nbsp;
+  </div>
+</footer>
+</html>

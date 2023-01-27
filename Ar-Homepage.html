@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html>
+<!--- /* this website is a prototype created by Sahar and isn't based on any real buiness.*/ --->
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> H&S Cafe </title>
+
+<style >/*type="text/css"*/
+      *{
+        scroll-behavior: smooth;
+        box-sizing: border-box;/* menu section box*/
+
+      }
+      body {
+        width: 100%; height: 100%; margin: 0;  overflow-x: hidden; /*to prevent white space on the right  Credit: https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend*/
+        family:Verdana,Geneva,sans-serif;
+       }
+        #Homesection{
+          height: 850px;
+          width: 100%;
+          background-color:rgba(60, 160, 130, 0.07);/*light teal color*/
+          background-size: 100%;
+        }
+        #Menusection{
+          height:1600px;
+          background-color:rgba(60, 160, 130, 0.10);/*light teal color*/
+          background-size: 100%;
+        }
+        #Branchsection{
+          height: 920px;
+          background-color:rgba(53, 160, 130, 0.17);/*light teal color*/
+          background-size: 100%;
+        }
+        #Contactsection{
+          height: 770px;
+          background-color:rgba(53, 160, 130, 0.21);/*light teal color*/
+          background-size: 100%;
+        }
+
+/*-----------------------navigation bar-------------------------------------*/
+          .nav-section {
+                width: 100%;
+                background-color:rgba(4, 2, 7, 0.9); /* extra light grey*/
+                position: fixed;  /* Set the navbar to fixed position */
+                z-index: 9999; /*to set the va bar fixed indefinitely against absolute elements*/
+                margin-top: 0;
+            }
+          nav ul {
+                width: 100%;
+                margin: 0 auto ;
+                background-color: rgba(255, 255, 255, 0.15);
+                text-align: center;
+            }
+          nav ul li {
+                list-style: none;
+                display: inline-block;
+            }
+          nav ul li a {
+                display: block;
+                text-decoration: none;
+                padding: 20px 45px;
+                font-size: 21px;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: white; /*navigation bar text color */
+                transition: 0.5s ease;
+            }
+          nav ul li a:hover {
+                color:rgba(117, 237, 42, 0.81);/*neon teal*/
+            }
+
+/*----------------Menu section style----------------------------------*/
+                .container {
+                   position: relative ;
+                }
+                .image {
+                  display: inline-block;
+                  width: 100%;
+                  height: auto;
+                }
+                .overlay {
+                  position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  height: 100%;
+                  width: 100%;
+                  opacity: 0;
+                  transition: .5s ease;
+                  background-color: rgba(153,130,130,0.70) ;
+                }
+                .container:hover .overlay {
+                  opacity: 1;
+                }
+                .text {
+                  color: white;
+                  font-size: 20px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  -webkit-transform: translate(-50%, -50%);
+                  -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+                  text-align: center;
+                }
+                .column {
+                  float: left;
+                  width: 25%;
+                  padding: 5px;
+                }
+                .row::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+                }
+                mmenu{
+                  /*display: inline-block;*/
+                  direction: rtl;
+                  text-align: center;
+                  font-family: monospace;
+                  font-size: 30px;
+                }
+                #centered{
+                  bottom: 458px;
+                  left: 25%;
+                  position: relative;
+                }
+                #centered2{
+                  bottom: 894px;
+                  left: 49.4%;
+                  position: relative;
+                }
+                #centered3{
+                  bottom: 1324px;
+                  left: 78.5%;
+                  position: relative;
+                }
+
+                /*CREDIT:
+                 code from https://www.w3schools.com/
+                image from https://instagram.com/intelligentsiacoffee?igshid=1f11gwx7hehdn
+                and https://www.we-heart.com/2018/01/04/budapest-cafe-chengdu-biasol/?utm_content=buffer85c92&utm_medium=social&utm_source=pinterest.com&utm_campaign=buffer
+                */
+/*--------------------Branches section style---------------------------------*/
+            select {
+              width: 78%;
+              height: 35px;
+              border-radius: 7px;
+              margin-left: 45px;
+              border-width: 1px;
+              border-color: white;
+              }
+/*-------------------contact section style----------------*/
+
+          #logo1{
+            bottom: 490px;
+            left: 990px;
+            position: relative;
+          }
+          #logo2{
+            font-size: 230%;
+            bottom: 200px;
+            left: 0px;
+            position: relative;
+          }
+          #box1{
+            left: 210px;
+            position: relative;
+          }
+  /*---------------------------------------------------------------------------------------------------------------*/
+        </style>
+
+    </head>
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript"></script>
+     <script type="text/javascript">
+
+    function branchselect() {
+        var v = document.getElementById("loclist").value;
+
+        var s1 = document.getElementById("All");
+        var s2 = document.getElementById("Al-Qassim");
+        var s3 = document.getElementById("Riyadh");
+        var s4 = document.getElementById("Hail");
+        var s5 = document.getElementById("Medinah");
+        var s6 = document.getElementById("Dubai");
+        var s7 = document.getElementById("Abu-Dahbi");
+        var s8 = document.getElementById("Cairo");
+
+           if ( v == 'All'){
+             s1.style="display:block";
+             s2.style="display:none";
+             s3.style="display:none";
+             s4.style="display:none";
+             s5.style="display:none";
+             s6.style="display:none";
+             s7.style="display:none";
+             s8.style="display:none";
+           }
+           if ( v == 'Al-Qassim'){
+             s1.style="display:none";
+             s2.style="display:block";
+             s3.style="display:none";
+             s4.style="display:none";
+             s5.style="display:none";
+             s6.style="display:none";
+             s7.style="display:none";
+             s8.style="display:none";
+           }
+           if ( v == 'Riyadh'){
+             s1.style="display:none";
+             s2.style="display:none";
+             s3.style="display:block";
+             s4.style="display:none";
+             s5.style="display:none";
+             s6.style="display:none";
+             s7.style="display:none";
+             s8.style="display:none";
+           }
+           if ( v == 'Hail'){
+             s1.style="display:none";
+             s2.style="display:none";
+             s3.style="display:none";
+             s4.style="display:block";
+             s5.style="display:none";
+             s6.style="display:none";
+             s7.style="display:none";
+             s8.style="display:none";
+           }
+           if ( v == 'Medinah'){
+             s1.style="display:none";
+             s2.style="display:none";
+             s3.style="display:none";
+             s4.style="display:none";
+             s5.style="display:block";
+             s6.style="display:none";
+             s7.style="display:none";
+             s8.style="display:none";
+           }
+           if ( v == 'Dubai'){
+             s1.style="display:none";
+             s2.style="display:none";
+             s3.style="display:none";
+             s4.style="display:none";
+             s5.style="display:none";
+             s6.style="display:block";
+             s7.style="display:none";
+             s8.style="display:none";
+           }
+           if ( v == 'Abu-Dahbi'){
+             s1.style="display:none";
+             s2.style="display:none";
+             s3.style="display:none";
+             s4.style="display:none";
+             s5.style="display:none";
+             s6.style="display:none";
+             s7.style="display:block";
+             s8.style="display:none";
+           }
+           if ( v == 'Cairo'){
+             s1.style="display:none";
+             s2.style="display:none";
+             s3.style="display:none";
+             s4.style="display:none";
+             s5.style="display:none";
+             s6.style="display:none";
+             s7.style="display:none";
+             s8.style="display:block";
+           }
+         }
+
+
+                     function Rate1(){
+                       var star1 = document.getElementById("star1");
+                       var star2 = document.getElementById("star2");
+                       var star3 = document.getElementById("star3");
+                       var star4 = document.getElementById("star4");
+                       var star5 = document.getElementById("star5");
+                        if (star1.style.color.match ("black")) {
+                          star1.style.color= "orange";
+                        } else {
+                          star1.style.color= "black";
+                          star2.style.color= "black";
+                          star3.style.color= "black";
+                          star4.style.color= "black";
+                          star5.style.color= "black";}}
+
+                     function Rate2(){
+                       var star1 = document.getElementById("star1");
+                       var star2 = document.getElementById("star2");
+                       var star3 = document.getElementById("star3");
+                       var star4 = document.getElementById("star4");
+                       var star5 = document.getElementById("star5");
+                         if (star2.style.color.match ("black")) {
+                           star1.style.color= "orange";
+                           star2.style.color= "orange";
+                         } else {
+                       star2.style.color= "black";
+                       star3.style.color= "black";
+                        star4.style.color= "black";
+                        star5.style.color= "black";}}
+
+
+                     function Rate3(){
+                       var star1 = document.getElementById("star1");
+                       var star2 = document.getElementById("star2");
+                       var star3 = document.getElementById("star3");
+                       var star4 = document.getElementById("star4");
+                       var star5 = document.getElementById("star5");
+                        if (star3.style.color.match ("black")) {
+                          star1.style.color= "orange";
+                          star2.style.color= "orange";
+                          star3.style.color= "orange";
+                        } else {
+                      star3.style.color= "black";
+                      star4.style.color= "black";
+                      star5.style.color= "black";}}
+
+
+                     function Rate4(){
+                       var star1 = document.getElementById("star1");
+                       var star2 = document.getElementById("star2");
+                       var star3 = document.getElementById("star3");
+                       var star4 = document.getElementById("star4");
+                       var star5 = document.getElementById("star5");
+                       if (star4.style.color.match ("black")) {
+                         star1.style.color= "orange";
+                         star2.style.color= "orange";
+                         star3.style.color= "orange";
+                         star4.style.color= "orange";
+
+                       } else {
+                     star4.style.color= "black";
+                     star5.style.color= "black";}}
+
+
+                     function Rate5(){
+                        var star1 = document.getElementById("star1");
+                        var star2 = document.getElementById("star2");
+                        var star3 = document.getElementById("star3");
+                        var star4 = document.getElementById("star4");
+                        var star5 = document.getElementById("star5");
+                        if (star5.style.color.match ("black")) {
+                          star1.style.color= "orange";
+                          star2.style.color= "orange";
+                          star3.style.color= "orange";
+                          star4.style.color= "orange";
+                          star5.style.color= "orange";
+                        } else {
+
+                      star5.style.color= "black";}}
+
+
+
+    </script>
+
+    <div class="nav-section">
+        <nav>
+          <ul>
+                <li><a href="Homepage.html">English</a></li>
+                <li><a href="Ar-Homepage.html#Contactsection">تواصل معنا</a></li>
+                <li><a href="Ar-About.html">نبذه عنا</a></li>
+                <li><a href="Ar-Homepage.html#Branchsection">فروعنا</a></li>
+                <li><a href="Guide.html">Guide</a></li>
+                <li><a href="Ar-Homepage.html#Menusection">منتجاتنا</a></li>
+                <li><a href="Ar-Homepage.html" style="color:black; font-size:180%"> <img src="https://simpleicon.com/wp-content/uploads/key.png" alt="H&S logo" height="50" width="40" >H&S </a> </li>
+            </ul>
+        </nav>
+      </div>
+
+       <nav id="Homesection">
+         <div style="position: relative fixed;">
+           <img src="https://i.pinimg.com/564x/5d/a5/6c/5da56cd1e61c2241520ac619edcb92b4.jpg" alt="image of cafe " style="position: relative fixed; float:right;">
+           <a style="color:rgb(254, 254, 250); font-size:130px; font-weight: bold; text-shadow: 2px 2px 5px rgb(38, 2, 2);">
+             <br> &nbsp;&nbsp;   هـ&س  مقهى </a>
+             <a style="color:rgb(38, 2, 2); font-size:30px; font-weight: bold;
+                position: absolute; left: 36%; top: 60%; transform: translate(-50%, -50%);">
+
+                &nbsp;&nbsp; رغم أن العالم العربي قدم القهوة للعالم لأوّل مرة إلا أنه حاليّا غير ممثّل في مجال القهوة المختصّة. هدفنا هو إرجاع وتقديم هذا النوع من القهوة إلى العالم العربي من جديد. وضماننا لكم أن القهوة التي نقدمها لكم هنا هي حسب الوصف وتحت تقييم معايير منظمات القهوة المختصّة Specialty Coffee وليست من الأسواق المحليّة حيث لا يعرف من أي محصول و لا من أي مزرعة ويغلب عليها شوائب التخزين الخاطئ ولا تغدو عن كونها سلعة Commodity Coffee.
+                 <br></a>
+              </div> <!-- CREDIT: description from saullat Cafe Website https://english.varietalcafe.com/about-varietal-store/?___store=en&___from_store=ar--->
+            </nav>
+
+      <nav id="Menusection">
+
+         <a style="color:rgb(254, 254, 250); font-size:110px; font-weight: bold; text-shadow: 2px 2px 5px rgb(38, 2, 2);">
+           <br> &nbsp; خلطات القهوة </a>
+
+            <div class="row">
+                  <div class="column"> <div class="container">
+                    <img src="SummerSolsticeCoffee.jpg" alt="Summer Solstice Coffee Blend" class="image"  style="width:100%;">
+                    <div class="overlay"> <div class="text">
+                      <strong>Summer Solstice</strong><br>
+                      <br>"Sometimes magic happens when two single origins come together. We're getting plenty of floral aromatics and light berry sweetness in this beautifully clean cup."</div>
+                    </div> </div> </div>
+                  <div class="column"><div class="container">
+                    <img src="PersephoneCoffee.jpg" alt="Persephone Coffee Blend" class="image" style="width:100%;">
+                    <div class="overlay"> <div class="text">
+                      <strong>Persephone</strong><br>
+                        <br>"Intelligentsia's blend has a round mouthfeel with a smooth, candied sweetness. Flavors of citrus and stone fruits meet hints of creamy nougat and caramel, making a thoroughly enjoyable first cup of the day."</div>
+                   </div> </div> </div>
+                 <div class="column"> <div class="container">
+                    <img src="OtonoCoffee.jpg" alt="Otono Coffee Blend" class="image" style="width:100%;" >
+                    <div class="overlay">  <div class="text">
+                      <strong>Otoño</strong><br>
+                        <br>"Our Otoño blend marks the change of seasons with fresh-crop coffees from Guatemala, Costa Rica, and Honduras that together deliver the flavour of fall: apple, brown sugar and plum."</div>
+                  </div> </div> </div>
+                <div class="column"> <div class="container">
+                      <img src="BoreealisCoffee.jpg" alt="Boreealis Coffee Blend" class="image" style="width:100%;">
+                      <div class="overlay"> <div class="text">
+                        <strong>Borealis</strong><br>
+                        <br>"Whether you glimpse the Northern Lights this winter or not, the persistent sweetness and fruit flavors in Borealis will warm your body and fire your mind."</div>
+                   </div> </div> </div>
+              </div>
+
+         <a style="color:rgb(254, 254, 250); font-size:100px; font-weight: bold; text-shadow: 2px 2px 5px rgb(38, 2, 2);">
+            <br>&nbsp;  قائمتنا </a><br>
+             <mmenu>
+               <div  style="width: 25%; height: 430px; border: rgba(15,130,44,0.0) 8px solid; background:rgba(950,220,190,0.4); " >
+                 <strong style="font-size: 33px;">&nbsp; المشروبات: </strong><br>&nbsp;&nbsp;-  ايسبرسو <br>&nbsp;&nbsp;-  لاتيه <br>&nbsp;&nbsp;- كابتشينو <br>&nbsp;&nbsp;- موكا
+                   <br>&nbsp;&nbsp;- امريكانو <br>&nbsp;&nbsp;- كورتادو <br>&nbsp;&nbsp;- فلات وايت <br>&nbsp;&nbsp;- ماكياتو <br>&nbsp;&nbsp;- شاي اسود <br>&nbsp;&nbsp;- شاي اخضر <br>
+                </div><br>
+               <div id="centered" class="centered" style="width: 25%; height: 430px; border: rgba(153,130,130,0) 8px solid; background:rgba(953,130,130,0.2);">
+                  <strong style="font-size: 33px;">&nbsp; عصائر : </strong><br>&nbsp;&nbsp;- سون سيت بيش <br>&nbsp;&nbsp;- قوس قزح <br>&nbsp;&nbsp;- مانجو <br>&nbsp;&nbsp;- فارولة <br>
+                  <strong style="font-size: 33px;">&nbsp; حلاة: </strong> <br>&nbsp;&nbsp;- كيك ريد فلفيت <br>&nbsp;&nbsp;- كيك زعفران<br>&nbsp;&nbsp;- كيك ليمون<br>&nbsp;&nbsp;- براوني<br>&nbsp;&nbsp;- كوكيز<br>
+               </div>
+                <div id="centered2" class="centered" style="width: 28%; height: 430px; border: rgba(153,130,130,0) 8px solid; background:rgba(953,130,130,0);">
+                   <img src="https://www.we-heart.com/upload-images/budapestcafechengduchina1@2x.jpg" alt="image of cafe " height="220" width="410">
+                   <img src="https://www.we-heart.com/upload-images/budapestcafechengduchina9@2x.jpg" alt="image of cafe" height="200" width="410">
+                 </div>
+                <div id="centered3" class="centered" style="width: 20%; height: 430px; border: rgba(153,130,130,0) 8px solid; background:rgba(953,130,130,0);">
+                   <img src="https://www.we-heart.com/upload-images/budapestcafechengduchina6.jpg" alt="image of cafe " height="428" width="310">
+                  </div>
+            </mmenu>
+
+        </nav>
+
+         <nav id="Branchsection"  style="direction: rtl; text-align: center;">
+           <form method="get">
+
+           <label style="color:rgb(254, 254, 250); font-size:110px; font-weight: bold; text-shadow: 2px 2px 5px rgb(38, 2, 2); ">
+             <br> &nbsp; فروعنا: </label><br>
+
+             <select id="loclist" onchange="branchselect()">
+               <option disabled selected hidden>  &nbsp; &nbsp; &nbsp;     اختر مدينه.....</option>
+               <option value="All" > كل الفروع </option>
+              <option disabled> السعودية :</option>
+                <option value="Al-Qassim"> القصيم</option>
+                <option value="Riyadh"> الرباض</option>
+                <option value="Hail"> حائل </option>
+                <option value="Medinah"> المدينة </option>
+              <option Disabled> الامارات العربية المتحدة:</option>
+                <option value="Dubai"> دبي </option>
+                <option value="Abu-Dahbi"> ابو ظبي </option>
+              <option Disabled>مصر : </option>
+                <option value="Cairo"> القاهره </option>
+              </select>
+
+              <p style="margin-left: 80px;">
+              <ul id="Al-Qassim" style="display: none;">
+                <br><li><strong>Buraydah </strong><br> King Fahad Rd, Al Iskan, Buraydah 52386 </li>
+                <br><li><strong>Unayzah</strong><br> King Abdulaziz Rd, Shikhah, Unayzah 5648</li>
+                <br><li><strong>Bukayriyah</strong><br> King Fahar Rd, Shikhah, Unayzah 5648</li></ul>
+              <ul id="Riyadh" style="display: none; ">
+                <br><li><strong>Al Malaz </strong><br> Al Jamiah St, Al Malaz, Riyadh 12642</li>
+                <br><li><strong>Al Hamra</strong><br> King Fahad Rd, Al Hamra, Riyadh 67694</li> </ul>
+              <ul id="Hail" style="display: none; ">
+                <br><li><strong>Hail </strong><br> King Fahad Rd, Al Safra, Hail 37659</li></ul>
+              <ul id="Medinah" style="display: none; ">
+                <br><li><strong>Al Medinah</strong><br> King Fahad Rd, Al Safra, Hail 37659</li></ul>
+              <ul id="Dubai" style="display: none; ">
+                <br><li><strong>Dubai</strong><br> Sheikh Mohammed bin Rashid Blvd, Sheikhah, Dubai 346749</li></ul>
+              <ul id="Abu-Dahbi" style="display: none; ">
+                <br><li><strong>Abu Dahbi</strong><br> Sheikh Mohammed bin Rashid Blvd, Abu Dahbi 346749</li></ul>
+              <ul id="Cairo" style="display: none; ">
+                <br><li><strong> Cairo</strong><br> 98 Nile St, ad Doqi A, Dokki, Giza Governorate, Egypt</li></ul>
+              <ul id="All" style="display: none;  ">
+
+                <br><label style="font-size:35px; font-weight: bold;"> Saudi Arabia:</label>
+                    <br><li><strong>Buraydah </strong><br> King Fahad Rd, Al Iskan, Buraydah 52386 </li>
+                    <br><li><strong>Unayzah</strong><br> King Abdulaziz Rd, Shikhah, Unayzah 5648</li>
+                    <br><li><strong>Bukayriyah</strong><br> King Fahar Rd, Shikhah, Unayzah 5648</li>
+                    <br><li><strong>Al Malaz </strong><br> Al Jamiah St, Al Malaz, Riyadh 12642</li>
+                    <br><li><strong>Al Hamra</strong><br> King Fahad Rd, Al Hamra, Riyadh 67694</li>
+                    <br><li><strong>Hail </strong><br> King Fahad Rd, Al Safra, Hail 37659</li>
+                    <br><li><strong>Al Medinah</strong><br> King Fahad Rd, Al Safra, Hail 37659</li>
+                 <br><br><label style="font-size:30px; font-weight: bold;">  United Arab Emirates: </label>
+                    <br><li><strong>Dubai</strong><br> Sheikh Mohammed bin Rashid Blvd, Sheikhah, Dubai 346749</li>
+                    <br><li><strong>Abu Dahbi</strong><br> Sheikh Mohammed bin Rashid Blvd, Abu Dahbi 346749</li>
+                 <br><br><label style="font-size:30px; font-weight: bold;">  Egypt: </label>
+                    <br><li><strong> Cairo</strong><br> 98 Nile St, Al Doqi A, Dokki, Giza Governorate,</li>
+                </ul></p>
+            </form>
+          </nav>
+
+          <nav id="Contactsection">
+
+            <br>
+            <label style="color:rgb(254, 254, 250); font-size:95px; font-weight: bold; text-shadow: 2px 2px 5px rgb(38, 2, 2); ">
+              <br> &nbsp; &nbsp; تواصل معنا: </label><br>
+            <br>
+
+                <div id="box1">
+
+                  <form  action="index.html" method="post">
+                     <p> <input  name="email" type="email"  size="70" placeholder ="yourEmail@exampple" style="width: 45%; height: 30px;" required> </p>
+                     <p> <textarea  name="comments" rows="10" cols="78" style= "width: 45%;" placeholder="Your Feedback is appreciated. and your concerns are our priority." required> </textarea> </p>
+                     <p> <input style= "width: 45%; height: 40px; border: White 1px solid; background: rgba(950,220,190,0.6)" type="submit" value="ارسل" > </p>
+                   <br>
+
+                  <p>
+                   <strong>قيمنا:</strong>
+                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                     <span id="star1" onclick="Rate1()" style="color: black;"class="fa fa-star"></span>
+                     <span id="star2" onclick="Rate2()" style="color: black;"class="fa fa-star"></span>
+                     <span id="star3" onclick="Rate3()" style="color: black;"class="fa fa-star"></span>
+                     <span id="star4" onclick="Rate4()" style="color: black;"class="fa fa-star"></span>
+                     <span id="star5" onclick="Rate5()" style="color: black;"class="fa fa-star"></span>
+                   </p>
+                </form>
+                    <nav style="left: 18%; position: relative;">
+                        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تابعنا:</strong></p>
+                      <a href="https://twitter.com/explore" target="_blank">
+                        <img src="https://image.flaticon.com/icons/png/512/23/23931.png" alt="twitter"height="35" width="35"></a>
+                      <a href="https://www.facebook.com/facebook" target="_blank">
+                        <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png" alt="facebook"height="35" width="39"></a>
+                      <a href="https://www.instagram.com/" target="_blank">
+                        <img src="https://cdn4.iconfinder.com/data/icons/social-media-black-white-2/600/Instagram_glyph_svg-512.png" alt="instagram"height="35" width="39"></a>
+                    </nav>
+                  </div>
+                <br>
+                    <div id="logo1" style="width: 40%; height: 370px; border: rgba(153,130,130,0) 8px solid; background:rgba(953,130,130,0)  ">
+                      <img src="https://simpleicon.com/wp-content/uploads/key.png" alt="key"height="350" width="190">
+                     <h1 id="logo2"> H&S . cafe</h1>
+                  </div>
+            </div>
+          </nav>
+
+
+    </body>
+    <footer style=" background-color: black; height: 100px;">
+
+        <div style="text-align: center; margin-left: 45px; font-size: 15px;"><br>
+        <a href="Homepage.html#Homesection" target="_blank" style="color: white;"> Home</a> &nbsp; &nbsp;&nbsp;
+        <a href="Homepage.html#Menusection" target="_blank" style="color: white;"> Menu</a>  &nbsp; &nbsp;&nbsp;
+        <a href="Guide.html" target="_blank" style="color: white;"> Match Maker!</a>  &nbsp; &nbsp;&nbsp;
+        <a href="About.html" target="_blank" style="color: white;"> About us</a>  &nbsp; &nbsp;&nbsp;
+        <a href="Homepage.html#Branchsection" target="_blank" style="color: white;"> Locations</a>  &nbsp; &nbsp;&nbsp;
+        <a href="mailto: abc@example.com" target="_blank" style="color: white;"> Email </a>  &nbsp; &nbsp;&nbsp;
+        <a href="https://twitter.com/explore" target="_blank" style="color: white;"> Twitter</a>  &nbsp; &nbsp;&nbsp;
+        <a href="https://www.facebook.com/facebook" target="_blank" style="color: white;"> Facebook</a>  &nbsp; &nbsp;&nbsp;
+        <a href="https://www.instagram.com/" target="_blank" style="color: white;"> instagram</a>  &nbsp; &nbsp;&nbsp;
+        <a href="EmploymentForm.html" target="_blank" style="color: white;"> Join us! </a>  &nbsp; &nbsp;&nbsp;
+        <a href="Homepage.com" target="_blank" style="color: white;"> Terms & Conditions </a>  &nbsp; &nbsp;&nbsp;
+        <input type="text" placeholder="   Search.." style="border-radius: 5px; border-width: 1px; border-color: white;"> <br>
+        <a style="color: white;"> © All Rights Reserved 2020 <br> Designed by Sahar </a>  &nbsp; &nbsp;&nbsp;
+      </div>
+    </footer>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+<!--- /* this website is a prototype created by Sahar and isn't based on any real buiness.*/ --->
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> H&S Cafe </title>
+
+<style >/*type="text/css"*/
+      *{
+        scroll-behavior: smooth;
+        box-sizing: border-box;/* menu section box*/
+
+      }
+      body {
+        width: 100%; height: 100%; margin: 0;  overflow-x: hidden; /* to prevent white space on the right  Credit: https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend*/
+        family:Verdana,Geneva,sans-serif;
+       }
+        #Homesection{
+          height: 850px;
+          width: 100%;
+          background-color:rgba(60, 160, 130, 0.07);/*light teal color*/
+          background-size: 100%;
+        }
+        #Menusection{
+          height:1600px;
+          background-color:rgba(60, 160, 130, 0.10);/*light teal color*/
+          background-size: 100%;
+        }
+        #Branchsection{
+          height: 920px;
+          background-color:rgba(53, 160, 130, 0.17);/*light teal color*/
+          background-size: 100%;
+        }
+        #Contactsection{
+          height: 770px;
+          background-color:rgba(53, 160, 130, 0.21);/*light teal color*/
+          background-size: 100%;
+        }
+
+/*-----------------------navigation bar-------------------------------------*/
+          .nav-section {
+                width: 100%;
+                background-color:rgba(4, 2, 7, 0.9); /* extra light grey*/
+                position: fixed;  /* Set the navbar to fixed position */
+                z-index: 9999; /*to set the va bar fixed indefinitely against absolute elements*/
+                margin-top: 0;
+            }
+          nav ul {
+                width: 100%;
+                margin: 0 auto ;
+                background-color: rgba(255, 255, 255, 0.15);
+                text-align: center;
+            }
+          nav ul li {
+                list-style: none;
+                display: inline-block;
+            }
+          nav ul li a {
+                display: block;
+                text-decoration: none;
+                padding: 20px 45px;
+                font-size: 21px;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: white; /*navigation bar text color */
+                transition: 0.5s ease;
+            }
+          nav ul li a:hover {
+                color:rgba(117, 237, 42, 0.81);/*neon teal*/
+            }
+/*------------------------------------------------------------------*/
+
+        #Aboutsection {
+          height: 782px;
+          background-color: rgb(223, 230, 222);
+          background-size: 100%;
+        }
+        #Careersection{
+          height: 150px;
+          background-color:rgb(184, 185, 173);
+          background-size: 100%;
+        }
+        #EmForm:link {
+          color: rgba(254, 254, 250, 0.96);
+          font-size: 50px;
+        }
+        #EmForm:visited{
+          color: gray;
+        }
+        #EmForm:hover{
+          color:  text-shadow: 2px 2px 5px rgb(234, 174, 184);
+        }
+    </style>
+
+
+    <meta charset="utf-8">
+    <title>About H&S Cafe</title>
+  </head>
+    <body>
+
+       <div class="nav-section">
+          <nav>
+            <ul>
+                 <li><a href="Homepage.html" style="color:black; font-size:180%"> <img src="https://simpleicon.com/wp-content/uploads/key.png" alt="H&S logo" height="50" width="40" >H&S </a> </li>
+                 <li><a href="Homepage.html#Menusection">Menu</a></li>
+                 <li><a href="Guide.html">Guide</a></li>
+                 <li><a href="About.html">About us</a></li>
+                 <li><a href="Homepage.html#Branchsection">Branches</a></li>
+                 <li><a href="Homepage.html#Contactsection">Contact Us</a></li>
+                 <li><a href="Ar-Homepage.html">العربية</a></li>
+              </ul>
+          </nav>
+        </div>
+
+        <div id="Aboutsection">
+          <img src="https://images.adsttc.com/media/images/5a67/d726/f197/ccde/2400/00d6/slideshow/biasol-budapest-chengdu-13-lr.jpg?1516754722" alt="image of cafe " style="width: 50%;float: right;">
+           <a style="color:rgba(254, 254, 250, 0.96); font-size:130px; font-weight: bold; text-shadow: 2px 2px 5px rgb(234, 174, 184); "> <br> &nbsp;&nbsp;  H&S cafe </a>
+              <a style="color:black; font-size:30px; font-weight: bold; position: absolute; left: 37%; top: 60%; transform: translate(-50%, -50%);">
+                <br> Specialty Coffee, in the Arab world.
+                 Our aim is to share the passion of Specialty coffee with the Arab world, with carefully selected, cupped, rated and properly stored green beans. We import our beans from known lots and auctions, where the beans are ethically and fairly traded. We roast our beans lightly to show the spectrum of characteristics each bean offers. Each coffee is carefully analysed to find the perfect roast profile, on our fluid bed roasters.
+                 This is a long journey of passion and love of coffee. We would like you join us in this journey as we learn and improve with you, We love to have you as our cupping buddy.
+                 To all of you, from all of us at Sulalat Coffee - Thank you and Happy cupping!</a>
+               <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            </div>
+
+            <div id="Careersection">
+              <label style="color:rgba(254, 254, 250, 0.96); font-size: 115px; font-weight: bold; text-shadow: 2px 2px 5px rgb(234, 174, 184); ">
+                 &nbsp;&nbsp;  Career </label>
+                 <a id="EmForm" href="EmploymentForm.html" target="_blank" >Join Us! </a>
+            </div>
+</body>
+
+<footer style=" background-color: black; height: 100px;">
+
+    <div style="text-align: center; margin-left: 45px; font-size: 15px;"><br>
+    <a href="Homepage.html#Homesection" target="_blank" style="color: white;"> Home</a> &nbsp; &nbsp;&nbsp;
+    <a href="Homepage.html#Menusection" target="_blank" style="color: white;"> Menu</a>  &nbsp; &nbsp;&nbsp;
+    <a href="Guide.html" target="_blank" style="color: white;"> Match Maker!</a>  &nbsp; &nbsp;&nbsp;
+    <a href="About.html" target="_blank" style="color: white;"> About us</a>  &nbsp; &nbsp;&nbsp;
+    <a href="Homepage.html#Branchsection" target="_blank" style="color: white;"> Locations</a>  &nbsp; &nbsp;&nbsp;
+    <a href="mailto: abc@example.com" target="_blank" style="color: white;"> Email </a>  &nbsp; &nbsp;&nbsp;
+    <a href="https://twitter.com/explore" target="_blank" style="color: white;"> Twitter</a>  &nbsp; &nbsp;&nbsp;
+    <a href="https://www.facebook.com/facebook" target="_blank" style="color: white;"> Facebook</a>  &nbsp; &nbsp;&nbsp;
+    <a href="https://www.instagram.com/" target="_blank" style="color: white;"> instagram</a>  &nbsp; &nbsp;&nbsp;
+    <a href="EmploymentForm.html" target="_blank" style="color: white;"> Join us! </a>  &nbsp; &nbsp;&nbsp;
+    <a href="Homepage.com" target="_blank" style="color: white;"> Terms & Conditions </a>  &nbsp; &nbsp;&nbsp;
+    <input type="text" placeholder="   Search.." style="border-radius: 5px; border-width: 1px; border-color: white;"> <br>
+    <a style="color: white;"> © All Rights Reserved 2020 <br> Designed by Sahar </a>  &nbsp; &nbsp;&nbsp;
+  </div>
+</footer>
+</html>

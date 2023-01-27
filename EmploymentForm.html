@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+       body {
+        family:Verdana,Geneva,sans-serif;
+        width: 100%; height: 100%; margin: 0;  overflow-x: hidden;
+        color: teal;
+       }
+       div {
+        border-width: 50%;
+        border-color: rgba(53, 160, 130, 1.41);
+        border-style: solid;
+        margin: auto;
+        width: 50%;
+        padding: 25px;
+       }
+       label { font-weight: bold; height: 50px; }
+       select { width: 100%; height: 30px; border-radius:5px; }
+      .inputs{ width: 90% ; padding: 6px 15px; margin: auto; }
+     </style>
+     <meta charset="utf-8">
+  <title>Empolyment Form </title>
+    </head>
+
+  <body>
+    <div>
+      <form method="post">
+        <a style="color:black; font-size:180%; margin-left:35%;"> <img src="https://simpleicon.com/wp-content/uploads/key.png" alt="H&S logo" height="50" width="40" >H&S </a>
+         <h1 style="color: white; background-color:teal; text-align: center;font-size:20px; font-family:Verdana,Geneva,sans-serif; padding:0px 1em;">Empolyment Application</h1>
+
+              <label> First Name: &nbsp;&nbsp; الاسم الاول: <a style="color:red;">*</a><br>
+                 <input class="inputs" type="text" name="name" placeholder="your name.." Required></label><br><br>
+
+              <label> Last Name: &nbsp;&nbsp;  اسم العائلة: <a style="color:red;">*</a> <br>
+                  <input class="inputs" type="text" name="name" placeholder="your name.." Required></label><br><br>
+
+              <label> Gender: &nbsp;&nbsp; الجنس:<a style="color:red;">*</a> <br>
+                   <select class="inputs" name="Gender" Required>
+                     <option hidden ></option>
+                     <option value="female"> Female/انثى </option>
+                     <option value="male"> Male/ذكر </option>
+                   </select></label><br><br>
+
+              <label> Date of Birth:&nbsp; :تاريخ الميلاد &nbsp; <a style="color:red;">*</a><br>
+                  <input class="inputs" type="text" name="DOB" placeholder="day-month-year" date="dd-mm-yy" Required></label><br><br>
+
+              <label> Email Address:&nbsp; البريد الإلكتروني: &nbsp; <a style="color:red;">*</a><br>
+                  <input class="inputs" type="email" name="email" placeholder="example@example.com" Required></label><br><br>
+
+               <label> Phone Number: &nbsp; رقم الجوال: &nbsp; <a style="color:red;">*</a><br>
+                <input class="inputs" type="tel" name="phonenum" placeholder="+966 xxxx xxxxx" maxlength="12" Required> </label><br><br>
+
+              <label> Nationality: &nbsp; الجنسية: &nbsp; <a style="color:red;">*</a><br>
+               <input class="inputs" type="text" name="nationality" Required> </label><br><br>
+
+              <label> National ID/Iqama ID: &nbsp;رقم بطاقة الأحوال/الإقامة: &nbsp; <a style="color:red;">*</a><br>
+               <input class="inputs" type="number" name="ID" maxlength="10" Required/> </label><br><br>
+
+              <label> City: &nbsp; المدينة: &nbsp; <a style="color:red;" >*</a><br>
+               <input class="inputs"  type="text" name="city" Required/></label><br><br>
+
+              <label> Job Applying for: &nbsp; الوظيفة المطلوبة: &nbsp;<a style="color:red;">*</a><br>
+               <input class="inputs" type="text" name="job" Required/></label><br><br>
+
+              <label> Quslification: &nbsp; المؤهل: &nbsp;<a style="color:red;">*</a><br>
+               <select class="inputs" name="qualif" Required>
+                 <option hidden></option>
+                  <option value="High School">High School\ثانوية عامه</option>
+                  <option value="Diploma"> Diploma\دبلوم</option>
+                  <option value="Bachelor Deg"> Bachelors degree\بكالوريوس</option>
+                  <option value="Masters Degree">Masters Degree\ماستر</option>
+                  <option value="Doctoral Degree">Doctrol Degree\دكتوراه</option>
+                </select></label><br><br>
+
+              <label> Major: &nbsp; التخصص:&nbsp;<a style="color:red;">*</a><br>
+                <input class="inputs" type="text" name="Major" Required></label><br><br>
+
+              <label style="size:2px;">Please attach a copy of your resume:&nbsp; يرجى إرفاق نسخة من السيرة الذاتية:<a style="color:red;">*</a><br>
+                <input class="inputs" type="file" name="Resume" size="25" Required></label><br><br>
+
+             <p> H&S would like to thank all applicants, however only those who qualify for an interview will be conatcted.</p><br>
+
+               <input style="background-color:teal; color: white; font-weight: bold;" class="inputs" type="submit" name="submit" value="Submit" />
+
+         </form>
+       </div>
+   </body>
+   <footer style=" background-color: black; height: 100px;">
+
+       <nav style="text-align: center; margin-left: 45px; font-size: 15px;"><br>
+       <a href="Homepage.html#Homesection" target="_blank" style="color: white;"> Home</a> &nbsp; &nbsp;&nbsp;
+       <a href="Homepage.html#Menusection" target="_blank" style="color: white;"> Menu</a>  &nbsp; &nbsp;&nbsp;
+       <a href="Guide.html" target="_blank" style="color: white;"> Match Maker!</a>  &nbsp; &nbsp;&nbsp;
+       <a href="About.html" target="_blank" style="color: white;"> About us</a>  &nbsp; &nbsp;&nbsp;
+       <a href="Homepage.html#Branchsection" target="_blank" style="color: white;"> Locations</a>  &nbsp; &nbsp;&nbsp;
+       <a href="mailto: abc@example.com" target="_blank" style="color: white;"> Email </a>  &nbsp; &nbsp;&nbsp;
+       <a href="https://twitter.com/explore" target="_blank" style="color: white;"> Twitter</a>  &nbsp; &nbsp;&nbsp;
+       <a href="https://www.facebook.com/facebook" target="_blank" style="color: white;"> Facebook</a>  &nbsp; &nbsp;&nbsp;
+       <a href="https://www.instagram.com/" target="_blank" style="color: white;"> instagram</a>  &nbsp; &nbsp;&nbsp;
+       <a href="EmploymentForm.html" target="_blank" style="color: white;"> Join us! </a>  &nbsp; &nbsp;&nbsp;
+       <a href="Homepage.com" target="_blank" style="color: white;"> Terms & Conditions </a>  &nbsp; &nbsp;&nbsp;
+       <input type="text" placeholder="   Search.." style="border-radius: 5px; border-width: 1px; border-color: white;"> <br>
+       <a style="color: white;"> © All Rights Reserved 2020 <br> Designed by Sahar </a>  &nbsp; &nbsp;&nbsp;
+     </nav>
+   </footer>
+</html>
